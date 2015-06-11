@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using DarkEdenWebsite.Models;
+using DarkEdenNetworkSite.Models;
 namespace DarkEdenWebsite.Controllers
 {
     public class MarketController : Controller
@@ -11,22 +12,37 @@ namespace DarkEdenWebsite.Controllers
         // GET: Home
         public ActionResult Slayer()
         {
-            return View();
+            var list = new DARKEDENEntities();
+            var items = list.GoodsListInfoes.Where(m => m.Race == "SLAYER").Take(10);
+
+            return View(items.ToList());
         }
 
         public ActionResult Vampire()
         {
-            return View();
+            var list = new DARKEDENEntities();
+            var items = list.GoodsListInfoes.Where(m => m.Race == "VAMPIRE").Take(10);
+
+
+            return View(items.ToList());
         }
 
         public ActionResult Ouster()
         {
-            return View();
+            var list = new DARKEDENEntities();
+            var items = list.GoodsListInfoes.Where(m => m.Race == "OUSTERS").Take(10);
+
+
+            return View(items.ToList());
         }
 
         public ActionResult Common()
         {
-            return View();
+            var list = new DARKEDENEntities();
+            var items = list.GoodsListInfoes.Where(m => m.Race == "COMMON").Take(10);
+
+
+            return View(items.ToList());
         }
 
 

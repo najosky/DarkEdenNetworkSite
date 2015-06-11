@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DARKEDENModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GoodsListInfo">
+          <Key>
+            <PropertyRef Name="GoodsID" />
+          </Key>
+          <Property Name="GoodsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Pay" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Limited" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="Hour" Type="bigint" Nullable="false" />
+          <Property Name="Race" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="Kind" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ItemClass" Type="smallint" Nullable="false" />
+          <Property Name="ItemType" Type="tinyint" Nullable="false" />
+          <Property Name="Grade" Type="int" Nullable="false" />
+          <Property Name="OptionType" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Num" Type="tinyint" Nullable="false" />
+          <Property Name="Img" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ShowWeb" Type="nvarchar" MaxLength="6" />
+          <Property Name="Recom" Type="smallint" Nullable="false" />
+          <Property Name="HotCount" Type="bigint" Nullable="false" />
+          <Property Name="RegistDate" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="Price" Type="bigint" Nullable="false" />
+          <Property Name="GroupItem" Type="int" Nullable="false" />
+          <Property Name="NewGoods" Type="smallint" Nullable="false" />
+          <Property Name="isPromotion" Type="smallint" />
+          <Property Name="MaxPurchaseNum" Type="int" />
+        </EntityType>
+        <EntityContainer Name="DARKEDENModelStoreContainer">
+          <EntitySet Name="GoodsListInfo" EntityType="Self.GoodsListInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DARKEDENModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GoodsListInfo">
+          <Key>
+            <PropertyRef Name="GoodsID" />
+          </Key>
+          <Property Name="GoodsID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pay" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Limited" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Hour" Type="Int64" Nullable="false" />
+          <Property Name="Race" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sex" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kind" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ItemClass" Type="Int16" Nullable="false" />
+          <Property Name="ItemType" Type="Byte" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="OptionType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Num" Type="Byte" Nullable="false" />
+          <Property Name="Img" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ShowWeb" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Recom" Type="Int16" Nullable="false" />
+          <Property Name="HotCount" Type="Int64" Nullable="false" />
+          <Property Name="RegistDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Price" Type="Int64" Nullable="false" />
+          <Property Name="GroupItem" Type="Int32" Nullable="false" />
+          <Property Name="NewGoods" Type="Int16" Nullable="false" />
+          <Property Name="isPromotion" Type="Int16" />
+          <Property Name="MaxPurchaseNum" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="DARKEDENEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GoodsListInfoes" EntityType="Self.GoodsListInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DARKEDENModelStoreContainer" CdmEntityContainer="DARKEDENEntities">
+          <EntitySetMapping Name="GoodsListInfoes">
+            <EntityTypeMapping TypeName="DARKEDENModel.GoodsListInfo">
+              <MappingFragment StoreEntitySet="GoodsListInfo">
+                <ScalarProperty Name="GoodsID" ColumnName="GoodsID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Pay" ColumnName="Pay" />
+                <ScalarProperty Name="Limited" ColumnName="Limited" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="Race" ColumnName="Race" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Kind" ColumnName="Kind" />
+                <ScalarProperty Name="ItemClass" ColumnName="ItemClass" />
+                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+                <ScalarProperty Name="Num" ColumnName="Num" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="ShowWeb" ColumnName="ShowWeb" />
+                <ScalarProperty Name="Recom" ColumnName="Recom" />
+                <ScalarProperty Name="HotCount" ColumnName="HotCount" />
+                <ScalarProperty Name="RegistDate" ColumnName="RegistDate" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="GroupItem" ColumnName="GroupItem" />
+                <ScalarProperty Name="NewGoods" ColumnName="NewGoods" />
+                <ScalarProperty Name="isPromotion" ColumnName="isPromotion" />
+                <ScalarProperty Name="MaxPurchaseNum" ColumnName="MaxPurchaseNum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

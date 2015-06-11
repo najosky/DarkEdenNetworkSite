@@ -4,11 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DarkEdenWebsite.Models;
+using Newtonsoft.Json;
+using DarkEdenNetworkSite.Models;
+using System.IO;
 
 namespace DarkEdenWebsite.Controllers
 {
     public class HomeController : Controller
     {
+        private DARKEDENEntities dataContext = new DARKEDENEntities();
+        private string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenWebsite - Copy/Json/Cart.json";
+        public JsonSerializer ser = new JsonSerializer();
+        public Cart cart = new Cart(new User());
         private Update update = new Update();
         private List<Update> homeUps = new List<Update> { new Update { Date = new DateTime(2015,5,3) , Title = "New Changes", Description = "We have changed a few of the layouts on the page and the backgrounds, but nothing too crazy has changed. You will survive, so don't panic. Carry on!" + 
             "The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.", TypeOfUpdate = UpdateType.News},
@@ -57,7 +64,12 @@ namespace DarkEdenWebsite.Controllers
 
         public ActionResult Market()
         {
-            return View();
+            ViewBag.Slayers = dataContext.GoodsListInfoes.Where(m => m.Race == "SLAYER").Take(4);
+            ViewBag.Vampires = dataContext.GoodsListInfoes.Where(m => m.Race == "VAMPIRE").Take(4);
+            ViewBag.Ousters = dataContext.GoodsListInfoes.Where(m => m.Race == "OUSTERS").Take(3);
+            ViewBag.Common = dataContext.GoodsListInfoes.Where(m => m.Race == "COMMON").Take(4);
+
+            return View(dataContext.GoodsListInfoes.ToList());
         }
 
         public ActionResult NewsEvents()
@@ -69,7 +81,55 @@ namespace DarkEdenWebsite.Controllers
             return View(update);
         }
 
+        public ActionResult AddToCart()
+        {
+            Read();
+            string id = Request.Params["id"];
+            string race = Request.Params["race"];
+            int i = int.Parse(id);
+            var items = dataContext.GoodsListInfoes.Where(m => m.GoodsID == i);
+            foreach (var item in items)
+                cart[item] = 1;
+            Write();
+            string Return = "/Market/";
+            switch (race)
+            {
+                case "Slayer":
+                case "Vampire":
+                case "Ouster":
+                case "Common":
+                    Return += race;
+                    break;
+                default:
+                    Return = "/Home/Market";
+                    break;
+
+            }
+            return View(Return);
+        }
+
+        public void Read()
+        {
+
+            StreamReader re = new StreamReader(path);
+            JsonTextReader reader = new JsonTextReader(re);
+            cart = ser.Deserialize<Cart>(reader);
+            reader.Close();
+        }
+        public void Write()
+        {
+            StreamWriter wr = new StreamWriter(path);
+            JsonTextWriter writer = new JsonTextWriter(wr);
+            ser.Serialize(writer, cart);
+            writer.Close();
+        }
+
         public ActionResult Info()
+        {
+            return View();
+        }
+
+        public ActionResult Checkout()
         {
             return View();
         }
