@@ -13,7 +13,7 @@ namespace DarkEdenWebsite.Controllers
     public class HomeController : Controller
     {
         private DARKEDENEntities dataContext = new DARKEDENEntities();
-        private string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenWebsite - Copy/Json/Cart.json";
+        private string path = "C:/Users/Caleb Bain/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
         public JsonSerializer ser = new JsonSerializer();
         public Cart cart = new Cart(new User());
         private Update update = new Update();
@@ -89,14 +89,20 @@ namespace DarkEdenWebsite.Controllers
             int i = int.Parse(id);
             var items = dataContext.GoodsListInfoes.Where(m => m.GoodsID == i);
             foreach (var item in items)
-                //cart[item] = 1;
+                cart[cart.Count()] = item;
             Write();
             string Return = "/Market/";
             switch (race)
             {
                 case "Slayer":
+                    Return += race;
+                    break;
                 case "Vampire":
+                    Return += race;
+                    break;
                 case "Ouster":
+                    Return += race;
+                    break;
                 case "Common":
                     Return += race;
                     break;

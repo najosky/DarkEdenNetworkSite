@@ -9,7 +9,7 @@
         <img src="~/Images/@num@m.Img@extend" />
         <figcaption>@m.Name</figcaption>
         <figcaption>Price: @m.Price</figcaption>
-        @{string path = "/Home/AddToCart?Id=" + m.GoodsID;}
+        @{string path = "/Home/AddToCart?Id=" + m.GoodsID + ",race=Vampire";}
         <a href="@path">Add To Cart</a>
     </div>
 }
