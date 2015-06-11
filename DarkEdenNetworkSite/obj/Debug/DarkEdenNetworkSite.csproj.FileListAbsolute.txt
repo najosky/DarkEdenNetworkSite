@@ -52,3 +52,4 @@ D:\documents\GitHub\DarkEdenNetworkSite\DarkEdenNetworkSite\bin\System.Web.WebPa
 D:\documents\GitHub\DarkEdenNetworkSite\DarkEdenNetworkSite\bin\System.Web.Optimization.xml
 D:\documents\GitHub\DarkEdenNetworkSite\DarkEdenNetworkSite\obj\Debug\DarkEdenNetworkSite.dll
 D:\documents\GitHub\DarkEdenNetworkSite\DarkEdenNetworkSite\obj\Debug\DarkEdenNetworkSite.pdb
+D:\documents\GitHub\DarkEdenNetworkSite\DarkEdenNetworkSite\obj\Debug\DarkEdenNetworkSite.csprojResolveAssemblyReference.cache

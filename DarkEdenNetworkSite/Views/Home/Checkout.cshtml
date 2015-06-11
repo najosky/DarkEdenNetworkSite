@@ -11,7 +11,7 @@
     <div class="Content">
         @{
         DarkEdenNetworkSite.Models.JsonConnection j = new DarkEdenNetworkSite.Models.JsonConnection();
-          string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
+          string path = "~/Json/Cart.json";
           DarkEdenNetworkSite.Models.Cart cart = j.Read<DarkEdenNetworkSite.Models.Cart>(path);
        }
        @foreach (var item in cart.CartItems)

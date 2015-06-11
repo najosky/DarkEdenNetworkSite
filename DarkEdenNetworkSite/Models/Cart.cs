@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace DarkEdenNetworkSite.Models
 {
@@ -58,12 +59,12 @@ namespace DarkEdenNetworkSite.Models
             }
 
             JsonConnection j = new JsonConnection();
-            string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Gold.json";
+            string path = "~/Json/Gold.json";
             long gold = j.Read<long>(path);
             gold -= totel;
             j.Write<long>(path, gold);
             CartItems = new List<GoodsListInfo>();
-            path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
+            path = "~/Json/Cart.json";
             j.Write<Cart>(path, this);
         }
 
