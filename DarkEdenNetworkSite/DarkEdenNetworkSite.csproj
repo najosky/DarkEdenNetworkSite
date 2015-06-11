@@ -2455,6 +2455,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Styles\CheckoutStyle.css" />
     <Content Include="Styles\CommonMarketStyle.css" />
+    <Content Include="Styles\ContactUsStyle.css" />
     <Content Include="Styles\FullMarketStyle.css" />
     <Content Include="Styles\HomeStyle.css" />
     <Content Include="Styles\InfoStyle.css" />

@@ -1,0 +1,44 @@
+﻿@font-face {
+    font-family: Header;
+    src: url(../fonts/Metamorphous-Regular.ttf);
+}
+
+table, td, tr {
+    margin: 0 auto;
+    border: 1px inset black;
+    width: 65%;
+    align-content: center;
+}
+
+    table td, table tr {
+        padding: 15px;
+        width: 200px;
+        text-align: center;
+        padding: 5px;
+        margin: 0px auto;
+    }
+
+article {
+    color: black;
+    font-family: Metamorphous-Regular;
+    margin: 0 auto;
+    background-color: AppWorkspace;
+    opacity: 0.9;
+    width: 70%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    top: 20%;
+}
+
+.body-content {
+    margin: 0 auto;
+    padding: 25px;
+    width: 80%;
+}
+
+    .body-content h2 {
+        font-size: 25pt;
+        text-align: center;
+        padding-bottom: 20px;
+    }
