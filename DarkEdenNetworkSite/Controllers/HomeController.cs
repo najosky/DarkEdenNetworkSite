@@ -14,12 +14,12 @@ namespace DarkEdenNetworkSite.Controllers
         private DARKEDENEntities dataContext = new DARKEDENEntities();
         public Cart cart = new Cart(new User());
         private Update update = new Update();
-        private List<Update> homeUps = new List<Update> { new Update { Date = new DateTime(2015,5,3) , Title = "New Changes", Description = "We have changed a few of the layouts on the page and the backgrounds, but nothing too crazy has changed. You will survive, so don't panic. Carry on!" + 
+        private List<Update> homeUps = new List<Update> { new Update { Date = new DateTime(2015,5,3) , Title = "New Changes", Description = "We have changed a few of the layouts on the page and the backgrounds, but nothing too crazy has changed. You will survive, so don't panic. Carry on! " + 
             "The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.", TypeOfUpdate = UpdateType.News},
                                                   new Update { Date = new DateTime(2015,5,10), Title = "Vamp Marathon", Description = "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are." + 
                                                       " But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone." + 
                                                       " And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.", TypeOfUpdate = UpdateType.Events},
-                                                  new Update { Date = new DateTime(2015,5,23) , Title = "Do You Love the Game?", Description = "We have changed a few of the layouts on the page and the backgrounds, but nothing too crazy has changed. You will survive, so don't panic. Carry on!" + 
+                                                  new Update { Date = new DateTime(2015,5,23) , Title = "Do You Love the Game?", Description = "We have changed a few of the layouts on the page and the backgrounds, but nothing too crazy has changed. You will survive, so don't panic. Carry on! " + 
             "The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will," + 
             " shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.", TypeOfUpdate = UpdateType.News},
                                                   new Update { Date = new DateTime(2015,5,31), Title = "LETS PLAY", Description = "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are." + 
@@ -27,7 +27,7 @@ namespace DarkEdenNetworkSite.Controllers
                                                       " And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.", TypeOfUpdate = UpdateType.Events},
                                                
                                                 };
-        private List<Update> ups = new List<Update> { new Update { Date = new DateTime(2015,5,3) , Title = "New Changes", Description = "We have changed a few of the layouts on the page and the backgrounds, but nothing too crazy has changed. You will survive, so don't panic. Carry on!" + 
+        private List<Update> ups = new List<Update> { new Update { Date = new DateTime(2015,5,3) , Title = "New Changes", Description = "We have changed a few of the layouts on the page and the backgrounds, but nothing too crazy has changed. You will survive, so don't panic. Carry on! " + 
             "The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will," + 
             " shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.", TypeOfUpdate = UpdateType.News},
                                                   new Update { Date = new DateTime(2015,6,1), Title = "Vamp Marathon", Description = "We are hosting a Vamp Marathon where all vampires in game can earn items based on actions.", TypeOfUpdate = UpdateType.Events},

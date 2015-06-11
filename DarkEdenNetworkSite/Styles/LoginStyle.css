@@ -1,0 +1,71 @@
+﻿@font-face {
+    font-family: Header;
+    src: url(../fonts/Metamorphous-Regular.ttf);
+}
+
+.form-group {
+    padding: 40px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Metamorphous-Regular;
+}
+
+    .form-group label {
+        font-size: 20pt;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+    }
+
+    .form-group p {
+        font-family: Metamorphous-Regular;
+        text-align: center;
+        font-size: 17pt;
+        float: right;
+    }
+
+.RegisterLink a:any-link {
+    color: white;
+}
+
+.RegisterLink a:hover {
+    color: red;  
+}
+
+.theBoxes {
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h4 {
+    font-family: Metamorphous-Regular;
+    color: white;
+    font-size: 25pt;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+
+.row {
+    background-image: url("../Images/black_background_images1.jpg");
+    margin: 0 auto !important;
+    float: none !important;
+    max-width: 1100px;
+    min-width: 690px;
+    height: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.submitButton {
+    font-family: Metamorphous-Regular;
+    font-size: 15pt;
+    color: red;
+}

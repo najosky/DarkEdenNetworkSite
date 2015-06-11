@@ -116,9 +116,27 @@ time, mark, audio, video {
     width: 1102px;
 }
 
+.holder img {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+
+.carousel {
+    margin: 0 auto !important;
+    float: none !important;
+    width: 1100px;
+    height: 180px;
+    overflow: hidden;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid #999;
+    box-shadow: 0 0 4px #000;
+    background-color: gray;
+}
 #login {
     color: #fff;
-    padding-top: 20px;
+    padding-top: 95px;
 }
 
     #login h1 {
@@ -138,26 +156,6 @@ time, mark, audio, video {
         margin-right: auto;
         border: none;
     }
-
-.holder img {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-}
-
-.carousel {
-    margin: 0 auto !important;
-    float: none !important;
-    width: 1100px;
-    height: 180px;
-    overflow: hidden;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 2px solid #999;
-    box-shadow: 0 0 4px #000;
-    background-color: gray;
-}
-
 .holder {
     width: 10000px;
     animation: carousel 25s linear infinite;

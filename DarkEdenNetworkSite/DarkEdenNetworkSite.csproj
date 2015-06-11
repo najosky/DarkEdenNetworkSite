@@ -1316,6 +1316,7 @@
     <Content Include="Images\1072.bmp" />
     <Content Include="Images\1073.bmp" />
     <Content Include="Images\architecture-22130_640_brick2.jpg" />
+    <Content Include="Images\black_background_images1.jpg" />
     <Content Include="Images\Common_Background.png" />
     <Content Include="Images\Common_Banner.png" />
     <Content Include="Images\darkeden-logo.jpg" />
@@ -2463,6 +2464,7 @@
     <Content Include="Styles\HomeStyle.css" />
     <Content Include="Styles\InfoStyle.css" />
     <Content Include="Styles\LayoutStyle.css" />
+    <Content Include="Styles\LoginStyle.css" />
     <Content Include="Styles\MarketStyle.css" />
     <Content Include="Styles\NewsEventStyle.css" />
     <Content Include="Styles\OusterMarketStyle.css" />
