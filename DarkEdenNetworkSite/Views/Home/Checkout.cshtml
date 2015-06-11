@@ -12,7 +12,7 @@
         @using System.Web.Mvc
 		@{
           DarkEdenNetworkSite.Models.JsonConnection j = new DarkEdenNetworkSite.Models.JsonConnection();
-          string path = Server.MapPath("~/Json/Cart.json");
+          string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
           DarkEdenNetworkSite.Models.Cart cart = j.Read<DarkEdenNetworkSite.Models.Cart>(path);
        }
        @foreach (var item in cart.CartItems)

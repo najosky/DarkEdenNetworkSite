@@ -59,12 +59,13 @@ namespace DarkEdenNetworkSite.Models
             }
 
             JsonConnection j = new JsonConnection();
-            string path = "~/Json/Gold.json";
+            string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Gold.json";
+
             long gold = j.Read<long>(path);
             gold -= totel;
             j.Write<long>(path, gold);
             CartItems = new List<GoodsListInfo>();
-            path = "~/Json/Cart.json";
+            path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
             j.Write<Cart>(path, this);
         }
 
