@@ -39,7 +39,7 @@ article{
     padding-top: 15px;
     padding-bottom: 15px;
     position: relative;
-    top: 10%;
+    top: 20%;
 
 }
 .body-content{
@@ -52,16 +52,13 @@ article{
     font-size:25pt;
     text-align: center;
 }
-
-.body-content h4{
-    font-size: 14pt;
-    text-align: center;
+p{
+    font-size: 8pt;
+    text-align: left;
     font-weight: bold;
-}
-ol{
     margin-left: auto;
     margin-right:auto;
-    text-align: justify;
+
 }
 ul{
     margin-left: auto;
@@ -83,6 +80,12 @@ ul li{
     padding: 5px;
     
 }
+#theRates{
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+}
+
 .SecondNav{
     margin-left: auto;
     margin-right:auto;

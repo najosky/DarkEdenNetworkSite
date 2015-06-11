@@ -1355,6 +1355,7 @@
     <Content Include="Styles\MarketStyle.css" />
     <Content Include="Styles\NewsEventStyle.css" />
     <Content Include="Styles\OusterMarketStyle.css" />
+    <Content Include="Styles\ServerRatesStyle.css" />
     <Content Include="Styles\SlayerMarketStyle.css" />
     <Content Include="Styles\VampireMarketStyle.css" />
     <Content Include="Web.config" />
