@@ -17,10 +17,17 @@
        }
        @foreach (var item in cart.CartItems)
        {
-          <h2 style="color:white;">@item.Name</h2>
+           int num = 0;
+           string extend = ".bmp";
+
+            <img src="~/Images/@num@item.Img@extend" />
+            <h2>@item.Name</h2>
+            <h2>Price: @item.Price</h2>
+
        }  
+        <button onclick="location.href='/Market/BuyItem'">Check Out</button>
+
         
-        <a href="/Market/BuyItem" type="submit">Buy Items</a>
     
     </div>
 </body>

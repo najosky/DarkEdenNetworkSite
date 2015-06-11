@@ -19,3 +19,7 @@
 h2{
     font-size: 20pt;
 }
+button{
+    border-style:none;
+    background-color:#FFA402;
+}

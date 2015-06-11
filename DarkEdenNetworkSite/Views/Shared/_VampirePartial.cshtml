@@ -5,13 +5,13 @@
 {
     int num = 0;
     string extend = ".bmp";
-    <div class="Items">
+    <figure class="Items">
         <img src="~/Images/@num@m.Img@extend" />
         <figcaption>@m.Name</figcaption>
         <figcaption>Price: @m.Price</figcaption>
-        @{string path = "/Home/AddToCart?Id=" + m.GoodsID + ",race=Vampire";}
-        <a href="@path">Add To Cart</a>
-    </div>
-}
+        @{string path = "/Home/AddToCart?Id=" + m.GoodsID;}
+        <button onclick="location.href='@path'">Add To Cart</button>
 
+    </figure>
+}
 

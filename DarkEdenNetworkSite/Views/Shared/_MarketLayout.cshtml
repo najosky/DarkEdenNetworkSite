@@ -14,11 +14,14 @@
     <a href="~/Home/Market">Market</a>
     <a href="~/Home/NewsEvents">News&Events</a>
     <a href="~/Home/Info">Info</a>
-    <a href="" id="log">Login</a>
+    <a href="~/Home/Checkout" class="Cart">S</a>
+
+    @Html.Partial("_LoginPartial")
 </nav>
 <body>
     <div>
-    @RenderBody()
+       @RenderBody()
+       @RenderSection("scripts", required: false)
     </div>
     <div class="checkout">
         @Html.Partial("_GoldPartial")

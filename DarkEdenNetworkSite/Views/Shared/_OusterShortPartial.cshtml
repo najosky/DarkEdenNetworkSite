@@ -3,7 +3,7 @@
 
 @{
     DarkEdenNetworkSite.Models.DARKEDENEntities dataContext = new DarkEdenNetworkSite.Models.DARKEDENEntities();
-    ViewBag.Ousters = dataContext.GoodsListInfoes.Where(m => m.Race == "OUSTERS").Take(4);
+    ViewBag.Ousters = dataContext.GoodsListInfoes.Where(m => m.Race == "OUSTERS").Take(3);
 }
 
 @foreach (var m in ViewBag.Ousters)
@@ -14,7 +14,9 @@
         <img src="~/Images/@num@m.Img@extend" />
         <figcaption>@m.Name</figcaption>
         <figcaption>Price: @m.Price</figcaption>
-        <button>To Cart</button>
+        @{string path = "/Home/AddToCart?Id=" + m.GoodsID;}
+        <button onclick="location.href='@path'">Add To Cart</button>
+
     </figure>
 }
 

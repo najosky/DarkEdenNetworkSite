@@ -10,7 +10,8 @@
         <figcaption>@m.Name</figcaption>
         <figcaption>Price: @m.Price</figcaption>
         @{string path = "/Home/AddToCart?Id=" + m.GoodsID;}
-        <a href="@path">Add To Cart</a>
+        <button onclick="location.href='@path'">Add To Cart</button>
+
     </figure>
 }
 
