@@ -1,6 +1,7 @@
 ﻿@{
+    @using System.Web.Mvc;
     DarkEdenNetworkSite.Models.JsonConnection j = new DarkEdenNetworkSite.Models.JsonConnection();
-    string path = "~/Json/Gold.json";
+    string path = Server.MapPath("~/Json/Gold.json");
     int gold = j.Read<int>(path);
 }
 
