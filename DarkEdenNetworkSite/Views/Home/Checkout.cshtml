@@ -9,8 +9,8 @@
 <body>
     <h1>Checkout</h1>
     <div class="Content">
-        @{
-            @using System.Web.Mvc
+        @using System.Web.Mvc
+		@{
           DarkEdenNetworkSite.Models.JsonConnection j = new DarkEdenNetworkSite.Models.JsonConnection();
           string path = Server.MapPath("~/Json/Cart.json");
           DarkEdenNetworkSite.Models.Cart cart = j.Read<DarkEdenNetworkSite.Models.Cart>(path);
