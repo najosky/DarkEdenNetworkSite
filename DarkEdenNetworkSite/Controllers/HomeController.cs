@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using DarkEdenWebsite.Models;
+using DarkEdenNetworkSite.Models;
 using Newtonsoft.Json;
 using DarkEdenNetworkSite.Models;
 using System.IO;
 
-namespace DarkEdenWebsite.Controllers
+namespace DarkEdenNetworkSite.Controllers
 {
     public class HomeController : Controller
     {

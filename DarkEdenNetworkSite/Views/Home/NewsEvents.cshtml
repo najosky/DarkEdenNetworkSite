@@ -1,4 +1,4 @@
-﻿@model DarkEdenWebsite.Models.Update
+﻿@model DarkEdenNetworkSite.Models.Update
 @{
     Layout = "~/Views/Shared/_DarkEdenLayout.cshtml";
 }
@@ -9,7 +9,7 @@
             <h2>News</h2>
             @foreach (var item in Model.TheListOfUpdates)
             {
-                if (item.TypeOfUpdate == DarkEdenWebsite.Models.UpdateType.News)
+                if (item.TypeOfUpdate == DarkEdenNetworkSite.Models.UpdateType.News)
                 {
                     @Html.Partial("_NewsPartial", item)
                 }
@@ -20,7 +20,7 @@
             <h2>Events</h2>
             @foreach (var item in Model.TheListOfUpdates)
             {
-                if (item.TypeOfUpdate == DarkEdenWebsite.Models.UpdateType.Events)
+                if (item.TypeOfUpdate == DarkEdenNetworkSite.Models.UpdateType.Events)
                 {
                     @Html.Partial("_NewsPartial", item)
                 }
