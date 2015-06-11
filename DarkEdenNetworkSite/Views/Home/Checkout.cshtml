@@ -1,6 +1,4 @@
-﻿@model DarkEdenNetworkSite.Models.Cart
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -11,8 +9,17 @@
 <body>
     <h1>Checkout</h1>
     <div class="Content">
-        @{int id = 0;}
-        @Model[id];
+        @{
+        DarkEdenNetworkSite.Models.JsonConnection j = new DarkEdenNetworkSite.Models.JsonConnection();
+          string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
+          DarkEdenNetworkSite.Models.Cart cart = j.Read<DarkEdenNetworkSite.Models.Cart>(path);
+       }
+       @foreach (var item in cart.CartItems)
+       {
+          <h2 style="color:white;">@item.Name</h2>
+       }  
+        
+        <a href="/Market/BuyItem" type="submit">Buy Items</a>
     
     </div>
 </body>

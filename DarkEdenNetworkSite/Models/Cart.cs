@@ -48,6 +48,25 @@ namespace DarkEdenNetworkSite.Models
             }
         }
 
+        public void CheckOut()
+        {
+            List<GoodsListInfo> list = CartItems;
+            long totel = 0;
+            foreach (var item in list)
+            {
+                totel += item.Price;
+            }
+
+            JsonConnection j = new JsonConnection();
+            string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Gold.json";
+            long gold = j.Read<long>(path);
+            gold -= totel;
+            j.Write<long>(path, gold);
+            CartItems = new List<GoodsListInfo>();
+            path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
+            j.Write<Cart>(path, this);
+        }
+
         public void RemoveItem(GoodsListInfo i)
         {
             _CartItems.Remove(i);

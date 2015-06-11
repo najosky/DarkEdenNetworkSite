@@ -79,11 +79,12 @@ namespace DarkEdenNetworkSite.Controllers
             return View(update);
         }
 
+
         public ActionResult AddToCart()
         {
             JsonConnection j = new Models.JsonConnection();
-            string path = "C:/Users/Caleb Bain/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
-            j.Read<Cart>(path);
+            string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
+            cart = j.Read<Cart>(path);
             string id = Request.Params["id"];
             string race = Request.Params["race"];
             int i = int.Parse(id);

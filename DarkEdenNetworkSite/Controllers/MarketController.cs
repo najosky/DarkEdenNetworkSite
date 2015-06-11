@@ -47,11 +47,23 @@ namespace DarkEdenNetworkSite.Controllers
         public ActionResult BuyGold(FormCollection form) 
         {
             JsonConnection j = new Models.JsonConnection();
-            string path = "C:/Users/Caleb Bain/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Gold.json";
+            string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Gold.json";
             int gold = j.Read<int>(path);
             gold += int.Parse(form["Amount"]);
             j.Write<int>(path, gold);
             return Redirect("/Home/Market");
         }
+
+        public ActionResult BuyItem()
+        {
+            JsonConnection j = new Models.JsonConnection();
+            string path = "C:/Users/thawkins/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
+            Cart cart = j.Read<Cart>(path);
+            cart.CheckOut();
+
+            
+            return Redirect("/Home/Checkout");
+        }
     }
+
 }
