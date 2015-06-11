@@ -38,9 +38,10 @@ h1{
 .itemMarket img{
     position: relative;
     display:inline-block;
+    left: 25px;
+    top: -10px;
     width:140px;
     height:140px;
-    left: 50px;
     padding-right: 40px;
 }
 
@@ -55,25 +56,25 @@ div img {
 #slayerItems{
     background-image:url("../Images/Slayer_Background.png");
     position: relative;
-    height: 200px;
+    height: 300px;
     bottom: 55px;
 }
 #vampireItems{
     background-image:url("../Images/Vampire_Background.png");
     position: relative;
-    height: 200px;
+    height: 300px;
     bottom: 45px;
 }
 #ousterItems{
     background-image:url("../Images/Ouster_Background.png");
     position: relative;
-    height: 200px;
+    height: 300px;
     bottom: 64px;
 }
 #commonItems{
     background-image:url("../Images/Common_Background.png");
     position: relative;
-    height: 200px;
+    height: 300px;
     bottom: 50px;
 }
 

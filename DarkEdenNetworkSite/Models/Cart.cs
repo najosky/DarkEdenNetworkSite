@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DarkEdenNetworkSite.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,74 +20,37 @@ namespace DarkEdenWebsite.Models
             get { return _Owner; }
         }
 
-        private List<MarketItem> _CartItems = new List<MarketItem>();
+        private Dictionary<GoodsListInfo, int> _CartItems = new Dictionary<GoodsListInfo, int>();
 
-        public List<MarketItem> CartItems
+        public Dictionary<GoodsListInfo, int> CartItems
         {
             get { return _CartItems; }
             set { _CartItems = value; }
         }
 
-        public MarketItem this[int index, int Quantity = 0]
+        public int this[GoodsListInfo item]
         {
             get
             {
-                int cartCount = _CartItems.Count() - 1;
-                if (index > cartCount)
-                {
-                    _CartItems.Last().Quantity += Quantity;
-                    return _CartItems.Last();
-                }
-
-                if (index < 0)
-                {
-                    _CartItems.First().Quantity += Quantity;
-                    return _CartItems.First();
-                }
-
-                _CartItems[index].Quantity += Quantity;
-                return _CartItems[index];
+                return _CartItems[item];
             }
 
             set
             {
-                if (index >= 0)
+                if (_CartItems.ContainsKey(item))
                 {
-                    if (index < _CartItems.Count())
-                    {
-                        _CartItems[index] = value;
-                        _CartItems[index].Quantity += Quantity;
-                    }
-                    else
-                    {
-                        if(_CartItems.Contains(value))
-                        {
-                            MarketItem temp = _CartItems.Where<MarketItem>(x => x.Equals(value)).Single<MarketItem>();
-                            temp.Quantity += value.Quantity + Quantity;
-                        }
-                        else 
-                        {
-                            _CartItems.Add(value);
-                            _CartItems.Where<MarketItem>(x => x.Equals(value)).Single<MarketItem>().Quantity += Quantity;
-                        }
-                    }
+                    _CartItems[item] += value;
+                }
+                else
+                {
+                    _CartItems.Add(item, value);
                 }
             }
         }
 
-        public void RemoveItem(int i, int amount = 0)
+        public void RemoveItem(GoodsListInfo i)
         {
-            if (amount <= 0 || amount >= _CartItems[i].Quantity)
-            {
-                if (i >= 0 && i < _CartItems.Count())
-                {
-                    _CartItems.Remove(_CartItems[i]);
-                }
-            }
-            else
-            {
-                _CartItems[i].Quantity -= amount;
-            }
+            _CartItems.Remove(i);
         }
 
         public int Count()

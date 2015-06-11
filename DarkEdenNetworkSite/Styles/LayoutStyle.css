@@ -23,7 +23,10 @@ time, mark, audio, video {
     font-family:Header;
     src:url(../fonts/Metamorphous-Regular.ttf);
 }
-
+@font-face{
+    font-family:cart;
+    src:url(../fonts/heydings_icons.ttf);
+}
 html{
     background-image:url("../Images/Darkeden-Recovered.png");
     margin: 0 auto !important;
@@ -56,10 +59,21 @@ nav a{
     font-size: 22pt;
     padding-right: 40px;
     position: relative;
-    top: 20px;
+    top: -20px;
     min-width: 30%;
     font-family: Header;
     right:30px;
+}
+
+.Cart{
+    font-family:cart;
+    font-size: 50pt;
+    position:relative;
+    top: -5px;
+}
+
+.Cart:hover{
+    color: gold;
 }
 
 nav a:link{

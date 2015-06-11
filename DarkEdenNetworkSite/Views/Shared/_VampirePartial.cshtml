@@ -1,0 +1,17 @@
+﻿
+<link rel="stylesheet" type="text/css" href="~/Styles/PartialMarketStyle.css" />
+
+@foreach (var m in ViewData.Model)
+{
+    int num = 0;
+    string extend = ".bmp";
+    <div class="Items">
+        <img src="~/Images/@num@m.Img@extend" />
+        <figcaption>@m.Name</figcaption>
+        <figcaption>Price: @m.Price</figcaption>
+        @{string path = "/Home/AddToCart?Id=" + m.GoodsID;}
+        <a href="@path">Add To Cart</a>
+    </div>
+}
+
+

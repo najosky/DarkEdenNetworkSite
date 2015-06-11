@@ -1,0 +1,16 @@
+﻿
+<link rel="stylesheet" type="text/css" href="~/Styles/PartialShortMarketStyle.css" />
+
+@foreach (var m in ViewBag.Ousters)
+{
+    int num = 0;
+    string extend = ".bmp";
+    <figure class="Items">
+        <img src="~/Images/@num@m.Img@extend" />
+        <figcaption>@m.Name</figcaption>
+        <figcaption>Price: @m.Price</figcaption>
+        <button>To Cart</button>
+    </figure>
+}
+
+
