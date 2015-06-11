@@ -20,30 +20,30 @@ namespace DarkEdenWebsite.Models
             get { return _Owner; }
         }
 
-        private Dictionary<GoodsListInfo, int> _CartItems = new Dictionary<GoodsListInfo, int>();
+        private List<GoodsListInfo> _CartItems = new List<GoodsListInfo>();
 
-        public Dictionary<GoodsListInfo, int> CartItems
+        public List<GoodsListInfo> CartItems
         {
             get { return _CartItems; }
             set { _CartItems = value; }
         }
 
-        public int this[GoodsListInfo item]
+        public GoodsListInfo this[int index]
         {
             get
             {
-                return _CartItems[item];
+                return _CartItems[index];
             }
 
             set
             {
-                if (_CartItems.ContainsKey(item))
+                if (index < _CartItems.Count && index >=)
                 {
-                    _CartItems[item] += value;
+                    _CartItems[index] += value;
                 }
                 else
                 {
-                    _CartItems.Add(item, value);
+                    _CartItems.Add(index, value);
                 }
             }
         }
