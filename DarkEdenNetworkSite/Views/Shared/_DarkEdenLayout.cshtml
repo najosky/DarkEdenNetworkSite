@@ -14,10 +14,12 @@
     <a href="~/Home/Market">Market</a> 
     <a href="~/Home/NewsEvents">News&Events</a> 
     <a href="~/Home/Info">Info</a> 
-    <a href=""id="log">Login</a>
+    <!-- <a href="~/Account/Login" id="log">Login</a>  -->
+    @Html.Partial("_LoginPartial")
 </nav>
 <body>
     @RenderBody()
+    @RenderSection("Scripts", false)
 </body>
 <footer> &copy; Dark Eden Network 2015</footer>
 </html>

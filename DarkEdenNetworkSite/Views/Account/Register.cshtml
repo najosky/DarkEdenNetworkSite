@@ -11,6 +11,17 @@
     <h4>Create a new account.</h4>
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
+    
+    //PlayerID  (This is login name for the game client)
+    //Password
+    //PIN (named as "Password" in SecondPassword table for DARKEDEN.db)
+    //Email
+    //Name
+    //Gender (named as "Sex" in Player table for DARKEDEN.db)
+    //Age (if above 18 set "teenager" in Player table for DARKEDEN.db to "0", else "1")
+    //Zipcode
+    
+    
     <div class="form-group">
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
