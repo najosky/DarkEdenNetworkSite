@@ -1401,6 +1401,8 @@
     <Content Include="Views\Home\Info.cshtml" />
     <Content Include="Views\Home\Market.cshtml" />
     <Content Include="Views\Home\NewsEvents.cshtml" />
+    <Content Include="Views\Home\ServerRates.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,6 +1,9 @@
-﻿@{
+﻿
+@{
+    ViewBag.Title = "ContactUs";
     Layout = "~/Views/Shared/_DarkEdenLayout.cshtml";
 }
+
 <link rel="stylesheet" type="text/css" href="~/Styles/InfoStyle.css" />
 <h1>Info</h1>
 <div class="content">
@@ -9,9 +12,10 @@
         <li>@Html.ActionLink("Server Rates", "ServerRates", "Home", new { @class = "SecondNav" })</li>
         <li>@Html.ActionLink("Contact Us", "ContactUs", "Home", new { @class = "SecondNav" })</li>
     </ul>
+
     <article>
         <section class="body-content">
-            <h2>Game Rules</h2>
+            <h2>Contact Us</h2>
             <h4>Please read and understand the rules.</h4>
             <br />
             <ol>
@@ -31,3 +35,4 @@
 
     </article>
 </div>
+

@@ -1,4 +1,9 @@
-﻿.content{
+﻿@font-face {
+    font-family: Header;
+    src: url(../fonts/Metamorphous-Regular.ttf);
+}
+
+.content{
     background-image:url("../Images/architecture-22130_640_brick2.jpg");
     margin: 0 auto !important;
     float: none !important;
@@ -22,4 +27,67 @@ h1{
     margin: 0 auto !important;
     float: none !important;
 }
+}
+article{
+    color: black;
+    font-family: Metamorphous-Regular;
+    margin-left: auto;
+    margin-right:auto;
+    background-color: AppWorkspace;
+    opacity: 0.9;
+    width: 65%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    top: 10%;
+
+}
+.body-content{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    width: 45%;
+}
+.body-content h2{
+    font-size:25pt;
+    text-align: center;
+}
+
+.body-content h4{
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+}
+ol{
+    margin-left: auto;
+    margin-right:auto;
+    text-align: justify;
+}
+ul{
+    margin-left: auto;
+    margin-right:auto;
+    text-decoration: none;
+}
+ul li{
+    margin-left: auto;
+    margin-right:auto;
+    display: inline-block;
+    background-color: AppWorkspace;
+    opacity: 0.9;
+    color: black;
+    font-family: Metamorphous-Regular;
+    border: 2px outset #ff0000; 
+    border-top-left-radius: 8px;
+    width: 25%;
+    text-align: center;
+    font-size: 20pt;
+     padding: 5px;
+    
+}
+.SecondNav{
+    text-decoration: none;
+    color: black;
+}
+.SecondNav li a:hover{
+    color: #85100F;
 }
