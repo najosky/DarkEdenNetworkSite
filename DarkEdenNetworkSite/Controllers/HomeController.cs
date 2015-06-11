@@ -89,7 +89,7 @@ namespace DarkEdenWebsite.Controllers
             int i = int.Parse(id);
             var items = dataContext.GoodsListInfoes.Where(m => m.GoodsID == i);
             foreach (var item in items)
-                cart[item] = 1;
+                //cart[item] = 1;
             Write();
             string Return = "/Market/";
             switch (race)

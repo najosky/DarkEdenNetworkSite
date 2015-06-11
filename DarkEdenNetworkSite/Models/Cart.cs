@@ -37,14 +37,14 @@ namespace DarkEdenWebsite.Models
 
             set
             {
-                if (index < _CartItems.Count && index >=)
-                {
-                    _CartItems[index] += value;
-                }
-                else
-                {
-                    _CartItems.Add(index, value);
-                }
+                //if (index < _CartItems.Count && index >=)
+                //{
+                //    _CartItems[index] += value;
+                //}
+                //else
+                //{
+                //    _CartItems.Add(index, value);
+                //}
             }
         }
 
