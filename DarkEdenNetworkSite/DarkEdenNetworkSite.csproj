@@ -206,6 +206,7 @@
       <DependentUpon>GoodsListInfo.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\JsonConnection.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MarketItem.cs" />
     <Compile Include="Models\Update.cs" />
@@ -2435,6 +2436,8 @@
       <DependentUpon>GoodsListInfo.edmx</DependentUpon>
       <LastGenOutput>GoodsListInfo1.cs</LastGenOutput>
     </Content>
+    <Content Include="Json\Cart.json" />
+    <Content Include="Json\Gold.json" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -2523,6 +2526,7 @@
     <Content Include="Views\Shared\_VampirePartial.cshtml" />
     <Content Include="Views\Shared\_VampireShortPartial.cshtml" />
     <Content Include="Views\Home\Checkout.cshtml" />
+    <Content Include="Views\Shared\_GoldPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

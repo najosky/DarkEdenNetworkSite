@@ -1,0 +1,26 @@
+﻿@{
+    DarkEdenNetworkSite.Models.JsonConnection j = new DarkEdenNetworkSite.Models.JsonConnection();
+    string path = "C:/Users/Caleb Bain/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Gold.json";
+    int gold = j.Read<int>(path);
+}
+
+<h3>Gold: @gold</h3>
+
+<form action="/Market/BuyGold" method="post" target="_top">
+    <input type="hidden" name="RedirectUrl">
+    <table>
+        <tr>
+            <td>
+                <select name="Amount">
+                    <option value="10">10 Gold for $1.00 USD</option>
+                    <option value="50">50 Gold for $5.00 USD</option>
+                    <option value="100">100 Gold for $10.00 USD</option>
+                    <option value="500">500 Gold for $50.00 USD</option>
+                    <option value="1000">1000 Gold for $100.00 USD</option>
+                    <option value="5000">5000 Gold for $500.00 USD</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif?akam_redir=1" border="0" name="submit">
+</form>

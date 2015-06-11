@@ -40,11 +40,18 @@ namespace DarkEdenNetworkSite.Controllers
         {
             var list = new DARKEDENEntities();
             var items = list.GoodsListInfoes.Where(m => m.Race == "COMMON").Take(10);
-
-
             return View(items.ToList());
         }
 
-
+        [HttpPost]
+        public ActionResult BuyGold(FormCollection form) 
+        {
+            JsonConnection j = new Models.JsonConnection();
+            string path = "C:/Users/Caleb Bain/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Gold.json";
+            int gold = j.Read<int>(path);
+            gold += int.Parse(form["Amount"]);
+            j.Write<int>(path, gold);
+            return Redirect("/Home/Market");
+        }
     }
 }

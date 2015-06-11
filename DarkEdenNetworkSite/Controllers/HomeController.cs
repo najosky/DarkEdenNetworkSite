@@ -13,8 +13,6 @@ namespace DarkEdenNetworkSite.Controllers
     public class HomeController : Controller
     {
         private DARKEDENEntities dataContext = new DARKEDENEntities();
-        private string path = "C:/Users/Caleb Bain/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
-        public JsonSerializer ser = new JsonSerializer();
         public Cart cart = new Cart(new User());
         private Update update = new Update();
         private List<Update> homeUps = new List<Update> { new Update { Date = new DateTime(2015,5,3) , Title = "New Changes", Description = "We have changed a few of the layouts on the page and the backgrounds, but nothing too crazy has changed. You will survive, so don't panic. Carry on!" + 
@@ -83,14 +81,16 @@ namespace DarkEdenNetworkSite.Controllers
 
         public ActionResult AddToCart()
         {
-            Read();
+            JsonConnection j = new Models.JsonConnection();
+            string path = "C:/Users/Caleb Bain/Documents/GitHub/DarkEdenNetworkSite/DarkEdenNetworkSite/Json/Cart.json";
+            j.Read<Cart>(path);
             string id = Request.Params["id"];
             string race = Request.Params["race"];
             int i = int.Parse(id);
             var items = dataContext.GoodsListInfoes.Where(m => m.GoodsID == i);
             foreach (var item in items)
                 cart[cart.Count()] = item;
-            Write();
+            j.Write<Cart>(path, cart);
             string Return = "/Market/";
             switch (race)
             {
@@ -114,21 +114,7 @@ namespace DarkEdenNetworkSite.Controllers
             return View(Return);
         }
 
-        public void Read()
-        {
-
-            StreamReader re = new StreamReader(path);
-            string json = re.ReadToEnd();
-            re.Close();
-            cart = JsonConvert.DeserializeObject<Cart>(json);
-        }
-        public void Write()
-        {
-            StreamWriter wr = new StreamWriter(path);
-            JsonTextWriter writer = new JsonTextWriter(wr);
-            ser.Serialize(writer, cart);
-            writer.Close();
-        }
+        
 
         public ActionResult Info()
         {
