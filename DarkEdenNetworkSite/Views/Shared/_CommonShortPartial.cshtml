@@ -1,6 +1,11 @@
 ﻿
 <link rel="stylesheet" type="text/css" href="~/Styles/PartialShortMarketStyle.css" />
 
+@{
+    DarkEdenNetworkSite.Models.DARKEDENEntities dataContext = new DarkEdenNetworkSite.Models.DARKEDENEntities();
+    ViewBag.Common = dataContext.GoodsListInfoes.Where(m => m.Race == "COMMON").Take(4);
+}
+
 @foreach (var m in ViewBag.Common)
 {
     int num = 0;

@@ -107,7 +107,7 @@ namespace DarkEdenNetworkSite.Controllers
                     Return += race;
                     break;
                 default:
-                    Return = "/Home/Market";
+                    Return = "Market";
                     break;
 
             }
@@ -118,9 +118,9 @@ namespace DarkEdenNetworkSite.Controllers
         {
 
             StreamReader re = new StreamReader(path);
-            JsonTextReader reader = new JsonTextReader(re);
-            cart = ser.Deserialize<Cart>(reader);
-            reader.Close();
+            string json = re.ReadToEnd();
+            re.Close();
+            cart = JsonConvert.DeserializeObject<Cart>(json);
         }
         public void Write()
         {
