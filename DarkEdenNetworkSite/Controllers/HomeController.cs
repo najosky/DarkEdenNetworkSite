@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using DarkEdenNetworkSite.Models;
 using Newtonsoft.Json;
-using DarkEdenNetworkSite.Models;
 using System.IO;
 
 namespace DarkEdenNetworkSite.Controllers

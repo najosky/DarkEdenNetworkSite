@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DARKEDENModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GoodsListInfo">
+    <Key>
+      <PropertyRef Name="GoodsID" />
+    </Key>
+    <Property Name="GoodsID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pay" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Limited" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Hour" Type="Int64" Nullable="false" />
+    <Property Name="Race" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kind" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ItemClass" Type="Int16" Nullable="false" />
+    <Property Name="ItemType" Type="Byte" Nullable="false" />
+    <Property Name="Grade" Type="Int32" Nullable="false" />
+    <Property Name="OptionType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Num" Type="Byte" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShowWeb" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Recom" Type="Int16" Nullable="false" />
+    <Property Name="HotCount" Type="Int64" Nullable="false" />
+    <Property Name="RegistDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Price" Type="Int64" Nullable="false" />
+    <Property Name="GroupItem" Type="Int32" Nullable="false" />
+    <Property Name="NewGoods" Type="Int16" Nullable="false" />
+    <Property Name="isPromotion" Type="Int16" />
+    <Property Name="MaxPurchaseNum" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="DARKEDENEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GoodsListInfoes" EntityType="Self.GoodsListInfo" />
+  </EntityContainer>
+</Schema>

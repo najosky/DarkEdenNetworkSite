@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DARKEDENModelStoreContainer" CdmEntityContainer="DARKEDENEntities">
+    <EntitySetMapping Name="GoodsListInfoes">
+      <EntityTypeMapping TypeName="DARKEDENModel.GoodsListInfo">
+        <MappingFragment StoreEntitySet="GoodsListInfo">
+          <ScalarProperty Name="GoodsID" ColumnName="GoodsID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Pay" ColumnName="Pay" />
+          <ScalarProperty Name="Limited" ColumnName="Limited" />
+          <ScalarProperty Name="Hour" ColumnName="Hour" />
+          <ScalarProperty Name="Race" ColumnName="Race" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="ItemClass" ColumnName="ItemClass" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="ShowWeb" ColumnName="ShowWeb" />
+          <ScalarProperty Name="Recom" ColumnName="Recom" />
+          <ScalarProperty Name="HotCount" ColumnName="HotCount" />
+          <ScalarProperty Name="RegistDate" ColumnName="RegistDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="GroupItem" ColumnName="GroupItem" />
+          <ScalarProperty Name="NewGoods" ColumnName="NewGoods" />
+          <ScalarProperty Name="isPromotion" ColumnName="isPromotion" />
+          <ScalarProperty Name="MaxPurchaseNum" ColumnName="MaxPurchaseNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
